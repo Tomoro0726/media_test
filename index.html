@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <!-- 3つのライブラリを読み込む -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+
+</head>
+<body>
+  <div id="myDiv">
+    <!-- Plotly chart will be drawn inside this DIV -->
+  </div>
+  <div class="container">
+
+    <!-- Webカメラの映像（入力） -->
+    <video id="input"></video>
+
+    <!--  認識した手の形状を可視化した映像（出力）  -->
+    <canvas id="output" width="1920" height="1080"></canvas>
+  </div>
+  <button id="start">start</button>
+  <button id="stop">stop</button>
+
+  <script src="/hand.js"></script>
+</body>
+</html>
